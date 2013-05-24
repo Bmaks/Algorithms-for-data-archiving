@@ -1,0 +1,19 @@
+# MS Visual studio stuff
+
+*.sdf
+*.sln
+*.suo
+*.log
+*tlog
+*.manifest
+*.idb
+*.pdb
+*.vcxproj
+*.filters
+*.user
+*.exp
+*.cache
+*.lastbuildstate
+*.ipch
+*.opensdf
+*.unsuccessfulbuild
