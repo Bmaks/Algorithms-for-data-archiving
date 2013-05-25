@@ -45,12 +45,12 @@ public:
 	short LastSymbolvar = 0;
 	
     
-    printf("Input file: ");
+    printf("Введiть назву(шлях) вхiдного файлу, данi якого будуть архiвуватися:  ");
     if ( scanf("%s", inFileName) != 1 ){
         perror("scanf");
         exit(1);
     }
-    printf("Output file: ");
+    printf("Введiть назву(шлях) вихiдного файлу, який мiститиме код файлу архiвування: ");
     if ( scanf("%s", outFileName) != 1 ){
     perror("scanf");
         exit(1);
@@ -80,12 +80,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		} 
 		if (InAlg == 0){      //зчитування в буфер у випадку не знаходження входження +1байт
 			alg_voc += alg_buf10[0];
@@ -101,12 +95,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		}
 		if (InAlg == 1){    //у випадку співпадання одного символу буфера і словника
 			for(j = 0;!(j == 2); ++j)
@@ -123,12 +111,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		}
 		if (InAlg == 2){
 			for(j = 0;!(j == 3); ++j)
@@ -145,12 +127,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		}
 		if (InAlg == 3){
 			for(j = 0;!(j == 4); ++j)
@@ -167,12 +143,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		}
 		if (InAlg == 4){
 			for(j = 0;!(j == 5); ++j)
@@ -189,12 +159,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		}
 		if (InAlg == 5){
 			for(j = 0;!(j == 6); ++j)
@@ -211,12 +175,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		}
 		if (InAlg == 6){
 			for(j = 0;!(j == 7); ++j)
@@ -233,12 +191,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		}
 		if (InAlg == 7){
 			for(j = 0;!(j == 8); ++j)
@@ -255,12 +207,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		}
 		if (InAlg == 8){
 			for(j = 0;!(j == 9); ++j)
@@ -277,12 +223,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		}
 		if (InAlg == 9){
 			for(j = 0;!(j == 10); ++j)
@@ -299,12 +239,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		}
 		if (InAlg == 10){
 			for(j = 0;!(j == 11); ++j)
@@ -321,12 +255,6 @@ public:
 				counter_buf++;
 				if (counter_buf == 10) break;
 			}
-/*			else
-			{
-				alg_buf10 += ' ';
-				counter_buf++;
-				if (counter_buf == 10) break;
-			}*/
 		}
 
 
@@ -536,16 +464,12 @@ public:
 			LastSymbolafter:
 
 			exitfromseek: c++;
-		/*	for (c = 0;!(c == 10); ++c)
-				if (alg_buf10[c] == ' ') ++endofprog;*/
-
 	}								//block
     
     if ( fclose(fin) )
         perror("fclose");
     if ( fclose(fout) )
         perror("fclose");
-
     }
 
 	virtual void Unzipping(){
@@ -561,12 +485,12 @@ public:
 	int chcount = 0, k = 0, d = 0;
 
 
-	    printf("Input file: ");
+	    printf("Введiть назву(шлях) вхiдного файлу, данi якого будуть розархiвованi:  ");
     if ( scanf("%s", inFileName) != 1 ){
         perror("scanf");
         exit(1);
     }
-    printf("Output file: ");
+    printf("Введiть назву(шлях) вихiдного файлу, який мiститиме оригiнальнi данi: ");
     if ( scanf("%s", outFileName) != 1 ){
     perror("scanf");
         exit(1);
@@ -582,15 +506,8 @@ public:
         exit(1);
 	}
 
-/*	while (!feof(fin)){
-		fseek(fin,1,SEEK_CUR);*/
 	while ( (ch = fgetc(fin))  != EOF ){
 		while ( (ch = fgetc(fin))  != EOF ){
-//				ch = fgetc(fin);
-	/*		if (ch == '<' | ch == '>' | ch == ','){
-				++entry;
-				continue;
-			}*/
 			if (ch == '0') offset_voc = 0; else {
 				OtherCase ++;
 				offset_voc = static_cast<int>(ch) - 48;
@@ -627,9 +544,7 @@ public:
 				} 
 				alg_voc += ch;
 				fseek(fin,1,SEEK_CUR);
-				
 		 }
-
 	}
 
 	for (k = alg_voc.length(), d = 0;(k > 0); ++d ,--k)
@@ -642,23 +557,311 @@ public:
 	}
 
 };
+class HF : public ILoad
+{
+	public:
+		 HF(){};
+		 ~HF(){};
+		 virtual void Archiving(){
+				char inFileName[BUFSIZ], outFileName[BUFSIZ], Array[BUFSIZ] ;
+	string ArrayCode[BUFSIZ] = {""};
+	int Arraycount[BUFSIZ][3] = {0}, Arraytruenumber[BUFSIZ] = {0};
+	float Arraycountfl[BUFSIZ] = {0}, Arraycountflch[BUFSIZ] = {0};
+    FILE *fin, *fout;
+    char ch;
+	int k = 0, Quant = 0;
+	short first = 0;
+	short check = 0;
+	int truenumber , flag, secondflag, thirdflag, firsttime;
+	int queuecount;
+	string str;
+
+
+	    printf("Введiть назву(шлях) вхiдного файлу, данi якого будуть архiвуватися:  ");
+    if ( scanf("%s", inFileName) != 1 ){
+        perror("scanf");
+        exit(1);
+    }
+    printf("Введiть назву(шлях) вихiдного файлу, який мiститиме код файлу архiвування: ");
+    if ( scanf("%s", outFileName) != 1 ){
+    perror("scanf");
+        exit(1);
+    }
+    if ( ( fin = fopen(inFileName, "r") ) == NULL ){
+        perror("fopen");
+        exit(1);
+    }
+    if ( ( fout = fopen(outFileName, "w") ) == NULL ){
+        perror("fopen");
+        if ( fclose(fin) )
+            perror("fclose");
+        exit(1);
+    }
+
+	while ( (ch = fgetc(fin))  != EOF ){
+		if (first == 0) goto firstentry;
+		for (int i = 0;!(i == k); ++i)
+		if (ch != Array[i]) 
+				check++;
+
+		if (check == k){
+firstentry:	Array[k] = ch;
+			++Arraycount[k][0];
+			++k;
+			first = 1;
+			check = 0;
+		} else
+			for (int j = 0;!(j == k); ++j)
+				if (ch == Array[j]){
+					++Arraycount[j][0];
+					check = 0;
+				}
+	} 
+		for (int i = 0;!(i == k); ++i){
+			Quant += Arraycount[i][0]; 
+		}
+
+		for (int i = 0;!(i == k); ++i){
+			Arraycountfl[i] = (float) Arraycount[i][0]/Quant;
+		}
+
+    int i, j;
+	float value;
+ 
+    for(i = 1; i < k; i++) {
+        value = Arraycountfl[i];
+        for (j = i - 1; j >= 0 && Arraycountfl[j] > value; j--) {
+            Arraycountfl[j + 1] = Arraycountfl[j];
+        }
+        Arraycountfl[j + 1] = value;
+    }
+	for (int i = 0;!(i == k); ++i)
+		Arraycountflch[i] = Arraycountfl[i];
+
+
+	for (int i = 0;!(i == k-1); ++i){
+
+		int number = (int) (Arraycountfl[i] * Quant);
+		for (int j = 0;!(j == k); ++j)
+		if (Arraycount[j][0] == number & Arraycount[j][1] == 0) { truenumber = j; Arraycount[j][1] = 1; break; }
+
+			if (!(i >= k-2))
+				for (int q = 0;!(q == queuecount); ++q){
+					if (truenumber == 0 & secondflag == 0) {
+						secondflag = 1;
+						Arraytruenumber[queuecount] = truenumber;
+						++queuecount;
+						firsttime = 1;
+						break;
+					}
+					if (firsttime == 0) goto labelfirsttime;
+					if (Arraytruenumber[q] != truenumber) 
+						++thirdflag;
+					}
+					if (thirdflag == queuecount) { 
+					labelfirsttime: 
+					Arraytruenumber[queuecount] = truenumber;
+					++queuecount;
+					firsttime = 1;
+					thirdflag = 0;
+					}
+					thirdflag = 0;   
+
+			ArrayCode[truenumber] += "1"; 
+
+		 number = (int) (Arraycountfl[i+1] * Quant);
+		 for (int j = 0;!(j == k); ++j)
+		  if (Arraycount[j][0] == number & (Arraycount[j][1] == 0 && Arraycount[j][2] == 0)) { truenumber = j; Arraycount[j][2] = 1; break; }
+			if (!(i >= k-2))
+				for (int q = 0;!(q == queuecount); ++q){
+					if (truenumber == 0 & secondflag == 0) {
+						secondflag = 1;
+						Arraytruenumber[queuecount] = truenumber;
+						++queuecount;
+						firsttime = 1;
+						break;
+					}
+					if (Arraytruenumber[q] != truenumber) 
+						++thirdflag;
+					}
+					if (thirdflag == queuecount) {
+						Arraytruenumber[queuecount] = truenumber;
+						++queuecount;
+						firsttime = 1;
+						thirdflag = 0;
+					}
+					thirdflag = 0;   
+
+			ArrayCode[truenumber] += "0";
+
+			Arraycountflch[i+1] = Arraycountflch[i+1] + Arraycountflch[i];
+			Arraycountflch[i] = 0;
+	}
+	--queuecount ;
+	Arraytruenumber[queuecount] = 0;
+	
+	while (!(queuecount == 0)){
+	for (int i = 0;!(i == queuecount); ++i)
+		ArrayCode[Arraytruenumber[i]] += "1";
+		--queuecount;
+	}
+
+	for (int i = 0;!(i == k); ++i){
+		fputc(Array[i], fout);
+		for (int j = ArrayCode[i].length()-1;!(j < 0); --j){
+			str = ArrayCode[i];
+			fputc(str[j], fout);
+			}
+	}
+	fputc(' ', fout);
+	fputc(' ', fout);
+	fseek(fin,0,SEEK_SET);
+	while ( (ch = fgetc(fin))  != EOF ){
+		for (int i = 0;!(i == k); ++i)
+		if (ch == Array[i]) 
+			for (int j = ArrayCode[i].length()-1;!(j < 0); --j){
+			str = ArrayCode[i];
+			fputc(str[j], fout);
+			}
+	} 
+	
+    if ( fclose(fin) )
+        perror("fclose");
+    if ( fclose(fout) )
+        perror("fclose");	 
+		 }
+		 virtual void Unzipping(){
+			
+	FILE *fin, *fout;
+	char inFileName[BUFSIZ], outFileName[BUFSIZ];
+	string Arraycode[BUFSIZ] = {""} ;
+	char Array[BUFSIZ]  = {""};
+	char ch, ch1 ;
+	int k = 0, FileCounter = 0 ;
+	string str;
+
+    printf("Введiть назву(шлях) вхiдного файлу, данi якого будуть архiвуватися:  ");
+    if ( scanf("%s", inFileName) != 1 ){
+        perror("scanf");
+        exit(1);
+    }
+    printf("Введiть назву(шлях) вихiдного файлу, який мiститиме код архiвованого файлу: ");
+    if ( scanf("%s", outFileName) != 1 ){
+    perror("scanf");
+        exit(1);
+    }
+    if ( ( fin = fopen(inFileName, "r") ) == NULL ){
+        perror("fopen");
+        exit(1);
+    }
+    if ( ( fout = fopen(outFileName, "w") ) == NULL ){
+        perror("fopen");
+        if ( fclose(fin) )
+            perror("fclose");
+        exit(1);
+    }
+	 
+	ch = fgetc(fin); // зчитування першого символу
+	Array[k] = ch; ++k;
+	++FileCounter ; 
+	while ( ((ch = fgetc(fin)) != (char) 32)  |  ((ch1 = fgetc(fin)) != (char) 32) ){
+		++FileCounter;
+		fseek(fin, FileCounter, SEEK_SET);       
+
+		if ((ch != '0') & (ch != '1')) {
+			Array[k] = ch;
+			++k;
+		}
+	}
+
+	fseek(fin, 0 , SEEK_SET);
+	k = -1;
+	FileCounter = 0 ;
+
+	while ( ((ch = fgetc(fin)) != (char) 32)  |  ((ch1 = fgetc(fin)) != (char) 32) ){
+		++FileCounter;
+		fseek(fin, FileCounter, SEEK_SET);  
+
+		if (ch != '0' & ch != '1') ++k;
+			if (ch == '0' | ch == '1') 
+				Arraycode[k] += ch;
+	}
+
+	while ( (ch = fgetc(fin))  != EOF ){
+		str += ch;
+		for (int i = 0;!(i == k+1); ++i)
+			if (str == Arraycode[i]){ 
+				fputc(Array[i], fout);
+				str = "";
+			}
+	}
+
+    if ( fclose(fin) )
+        perror("fclose");
+    if ( fclose(fout) )
+        perror("fclose");
+		 }
+};
 
 
 int main()
 {
+    setlocale(LC_ALL, "rus");
 	int chose;
+	char chosechar;
 	LZ LimpelZivel;
-//	HF Haffmana;
-    printf("Виберiть, будь ласка, тип архiвування:\n");
-	printf("1 - алгоритм Лiмпеля-Зiвеля, 2 - алгоритм Хаффмана");
+	HF Haffmana;
+
+	Again:
+    printf("Виберiть, будь ласка, умову виконання програми:\n");
+	printf("1 - Архiвування; 2 - Розархiвування.\n");
 	cin >> chose;
-//	scanf("%d%d",chose);
 	switch((int)chose){
 		case 1:
-			LimpelZivel.Archiving();
-			LimpelZivel.Unzipping();
+			printf("Виберiть, будь ласка, тип архiвування:\n");
+			printf("1 - Архiвування алгоритмом Лiмпеля-Зiвеля, 2 - Архiвування алгоритмом Хаффмана\n");
+			cin >> chose;
+			switch (chose){
+			case 1: 
+				LimpelZivel.Archiving();
+				printf("Якщо бажаєте продовжити натиснiть клавiшу \"c\", вихiд з програми - \"q\"\n");
+				cin >> chosechar;
+				if (chosechar == 'c') goto Again;
+				else if (chosechar == 'q') exit; else printf("Неправильна команда!");					
+				break;
+			case 2:
+				Haffmana.Archiving();
+				printf("Якщо бажаєте продовжити натиснiть клавiшу \"c\", вихiд з програми - \"q\"\n");
+				cin >> chosechar;
+				if (chosechar == 'c') goto Again;
+				else if (chosechar == 'q') exit; else printf("Неправильна команда!");	
+				break;
+			}
 			break;
 		case 2: 
+			printf("Виберiть, будь ласка, тип розархiвування:\n");
+			printf("1 - Розархiвування алгоритмом Лiмпеля-Зiвеля, 2 - Розархiвування алгоритмом Хаффмана\n");
+			cin >> chose;
+			switch (chose){
+			case 1: 
+				LimpelZivel.Unzipping();
+				printf("Якщо бажаєте продовжити натиснiть клавiшу \"c\", вихiд з програми - \"q\"\n");
+				cin >> chosechar;
+				if (chosechar == 'c') goto Again;
+				else if (chosechar == 'q') exit; else printf("Неправильна команда!");	
+				break;
+			case 2:
+				Haffmana.Unzipping();
+				printf("Якщо бажаєте продовжити натиснiть клавiшу \"c\", вихiд з програми - \"q\"\n");
+				cin >> chosechar;
+				if (chosechar == 'c') goto Again;
+				else if (chosechar == 'q') exit; else printf("Неправильна команда!");	
+				break;
+			}
+			break;
+		default:
+			printf("Неправильна команда!\n");
+			goto Again;
 			break;
 	}
     return 0;
